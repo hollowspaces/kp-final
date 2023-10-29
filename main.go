@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import "kp-final/controllers"
 
 func main() {
-	fmt.Println("Hello World!")
+	e := controllers.Init()
+	e.Logger.Fatal(e.Start(":1234"))
+
 }
