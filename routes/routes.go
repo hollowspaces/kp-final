@@ -7,6 +7,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+// SetupRoutes adalah fungsi yang digunakan untuk menambahkan rute-rute ke dalam server Echo.
 func SetupRoutes(e *echo.Echo) {
 	e.GET("/books", controllers.GetBooks)
 	e.GET("/books/:id", controllers.GetBook)

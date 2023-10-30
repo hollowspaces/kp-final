@@ -1,4 +1,3 @@
-// project-directory/main.go
 package main
 
 import (
@@ -15,9 +14,10 @@ func main() {
 		panic("Gagal menginisialisasi database: " + err.Error())
 	}
 
-	e := echo.New()
-	e.Use(middleware.Logger())
-	e.Use(middleware.Recover())
+	e := echo.New()             // Inisialisasi server Echo
+	e.Use(middleware.Logger())  // Middleware
+	e.Use(middleware.Recover()) // Inisialisasi rute
 	routes.SetupRoutes(e)
-	e.Start(":8080")
+
+	e.Start(":8080") // Start server pada port 8080
 }

@@ -1,5 +1,6 @@
 package models
 
+// Struktur data Book digunakan untuk merepresentasikan informasi buku.
 type Book struct {
 	ID            uint   `json:"id" gorm:"primaryKey"`
 	BookTitle     string `json:"book_title"`
