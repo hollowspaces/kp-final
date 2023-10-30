@@ -1,11 +1,7 @@
-package model
-
-import (
-	"github.com/jinzhu/gorm"
-)
+package models
 
 type Book struct {
-	gorm.Model
+	ID            uint   `json:"id" gorm:"primaryKey"`
 	BookTitle     string `json:"book_title"`
 	Author        string `json:"author"`
 	PublishedYear int    `json:"published_year"`
