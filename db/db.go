@@ -5,14 +5,30 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"os"
+	"fmt"
+	"github.com/joho/godotenv"
 )
 
 var DB *gorm.DB
 
 func InitDB() error {
+	// Load environment variables from .env file
+	err := godotenv.Load()
+	if err != nil {
+		fmt.Println("Error loading .env file")
+	}
+
 	// Konfigurasi koneksi ke database PostgreSQL
-	dsn := "host=dpg-cqfp2kaju9rs73c1dr2g-a user=postgresql_puji_user password=88UMCaUBA2LdzGINsOqtDSFIjeXxzP1T dbname=postgresql_puji port=5432 sslmode=disable TimeZone=Asia/Jakarta"
-	var err error
+	dsn := fmt.Sprintf(
+		"host=%s user=%s password=%s dbname=%s port=%s sslmode=%s TimeZone=%s",
+		os.Getenv("DB_HOST"),
+		os.Getenv("DB_USER"),
+		os.Getenv("DB_PASSWORD"),
+		os.Getenv("DB_NAME"),
+		os.Getenv("DB_PORT"),
+		os.Getenv("DB_SSLMODE"),
+		os.Getenv("DB_TIMEZONE"),
+	)
 
 	// Membuka koneksi ke database menggunakan driver PostgreSQL
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
