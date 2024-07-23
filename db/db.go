@@ -2,9 +2,9 @@ package db
 
 import (
 	"kp-final/models"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+	"os"
 )
 
 var DB *gorm.DB
