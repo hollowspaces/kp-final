@@ -44,7 +44,7 @@ func UpdateBook(c echo.Context) error {
 	id := c.Param("id")
 	var book models.Book
 	if err := database.DB.First(&book, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, "Buku tidak ditemukan")
+		return c.JSON(http.StatusNotFound, "Gagal memperbaharui. Buku tidak ditemukan")
 	}
 
 	// Bind data terupdate ke dalam model book
@@ -54,7 +54,7 @@ func UpdateBook(c echo.Context) error {
 
 	// Memperbaharui data buku ke dalam database
 	if err := database.DB.Save(&book).Error; err != nil {
-		return c.JSON(http.StatusInternalServerError, "Gagal memperbarui buku")
+		return c.JSON(http.StatusInternalServerError, "Gagal memperbaharui buku")
 	}
 
 	return c.JSON(http.StatusOK, book)
@@ -65,7 +65,7 @@ func DeleteBook(c echo.Context) error {
 	id := c.Param("id")
 	var book models.Book
 	if err := database.DB.First(&book, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, "Buku tidak ditemukan")
+		return c.JSON(http.StatusNotFound, "Gagal Menghapus. Buku tidak ditemukan")
 	}
 
 	if err := database.DB.Delete(&book).Error; err != nil {
