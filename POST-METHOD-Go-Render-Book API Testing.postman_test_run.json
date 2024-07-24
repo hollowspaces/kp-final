@@ -1,0 +1,132 @@
+{
+	"id": "a9bef60e-1837-4aec-8a0a-5b7cb8565896",
+	"name": "Go-Render-Book API Testing",
+	"timestamp": "2024-07-23T20:52:32.436Z",
+	"collection_id": "37164719-33804701-a268-4226-9b46-c5dedb203d29",
+	"folder_id": "37164719-3749e848-1f8b-455f-a746-79a0feb1558e",
+	"environment_id": "0",
+	"totalPass": 8,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-07-23T20:52:30.972Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "f55287cb-2290-4d02-8756-b83850fedc20",
+			"name": "Post new booklist data",
+			"url": "https://go-render-book-rest-api.onrender.com/books",
+			"time": 258,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is less than 200ms": false,
+				"Response has the required fields": true,
+				"Published year is a valid year format": true,
+				"ISBN is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Published year is a valid year format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ISBN is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				258
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is less than 200ms": false,
+					"Response has the required fields": true,
+					"Published year is a valid year format": true,
+					"ISBN is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "a1514203-da52-4686-8631-9da968206f32",
+			"name": "Post new booklist data (for delete test)",
+			"url": "https://go-render-book-rest-api.onrender.com/books",
+			"time": 282,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is within acceptable range": false,
+				"Response has the required fields": true,
+				"Published year is a valid year format": true,
+				"ISBN is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within acceptable range": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Published year is a valid year format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ISBN is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				282
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is within acceptable range": false,
+					"Response has the required fields": true,
+					"Published year is a valid year format": true,
+					"ISBN is a non-empty string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 540,
+	"collection": {
+		"requests": [
+			{
+				"id": "f55287cb-2290-4d02-8756-b83850fedc20",
+				"method": "POST"
+			},
+			{
+				"id": "a1514203-da52-4686-8631-9da968206f32",
+				"method": "POST"
+			}
+		]
+	}
+}

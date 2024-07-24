@@ -1,0 +1,200 @@
+{
+	"id": "8772d2f7-09b8-45c8-993a-3272fb957dff",
+	"name": "Go-Render-Book API Testing",
+	"timestamp": "2024-07-23T20:51:28.186Z",
+	"collection_id": "37164719-33804701-a268-4226-9b46-c5dedb203d29",
+	"folder_id": "37164719-27c40015-bb8e-4b45-8e59-8dbd48e3be48",
+	"environment_id": "0",
+	"totalPass": 11,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-07-23T20:51:25.696Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "6f517af7-7b7d-4ceb-9ef5-5a5b8bc7f675",
+			"name": "Get booklist by invalid endpoint",
+			"url": "https://go-render-book-rest-api.onrender.com/book",
+			"time": 274,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response time is less than 200ms": false,
+				"Response has the required fields": true,
+				"Ensure that the message field is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ensure that the message field is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				274
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response time is less than 200ms": false,
+					"Response has the required fields": true,
+					"Ensure that the message field is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "fb0b2525-4672-4147-9408-079ba5f301bf",
+			"name": "Get booklist by valid endpoint",
+			"url": "https://go-render-book-rest-api.onrender.com/books",
+			"time": 261,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response has the required fields": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				261
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response has the required fields": true
+				}
+			]
+		},
+		{
+			"id": "dbc1ed14-cd1e-4c45-8b23-de3df73b57e2",
+			"name": "Get book by valid id",
+			"url": "https://go-render-book-rest-api.onrender.com/books/1",
+			"time": 248,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 300ms": true,
+				"Response has the required fields": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				248
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 300ms": true,
+					"Response has the required fields": true
+				}
+			]
+		},
+		{
+			"id": "2615cbf4-aefa-4e18-94a9-0ff7f1272ae4",
+			"name": "Get book by invalid id",
+			"url": "https://go-render-book-rest-api.onrender.com/books/10",
+			"time": 261,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response time is less than 200ms": false,
+				"Response has the required fields": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				261
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response time is less than 200ms": false,
+					"Response has the required fields": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1044,
+	"collection": {
+		"requests": [
+			{
+				"id": "6f517af7-7b7d-4ceb-9ef5-5a5b8bc7f675",
+				"method": "GET"
+			},
+			{
+				"id": "fb0b2525-4672-4147-9408-079ba5f301bf",
+				"method": "GET"
+			},
+			{
+				"id": "dbc1ed14-cd1e-4c45-8b23-de3df73b57e2",
+				"method": "GET"
+			},
+			{
+				"id": "2615cbf4-aefa-4e18-94a9-0ff7f1272ae4",
+				"method": "GET"
+			}
+		]
+	}
+}

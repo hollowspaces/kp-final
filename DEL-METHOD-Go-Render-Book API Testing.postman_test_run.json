@@ -1,0 +1,132 @@
+{
+	"id": "5a9059f7-67e3-4b60-a444-ff2ace8a3613",
+	"name": "Go-Render-Book API Testing",
+	"timestamp": "2024-07-23T20:54:11.511Z",
+	"collection_id": "37164719-33804701-a268-4226-9b46-c5dedb203d29",
+	"folder_id": "37164719-ec4ecb1c-aa12-4972-8a2a-bf8e764557d0",
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-07-23T20:54:09.736Z",
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "d678abbc-a0de-46af-ac25-290834e0b970",
+			"name": "Delete book data by invalid id",
+			"url": "https://go-render-book-rest-api.onrender.com/books/10",
+			"time": 244,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response time is less than 200ms": false,
+				"Response has the required fields": false,
+				"Response field should be empty or null": false,
+				"Verify that the 'response' field is of type 'object' and not an array or string": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response field should be empty or null": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Verify that the 'response' field is of type 'object' and not an array or string": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				244
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response time is less than 200ms": false,
+					"Response has the required fields": false,
+					"Response field should be empty or null": false,
+					"Verify that the 'response' field is of type 'object' and not an array or string": false
+				}
+			]
+		},
+		{
+			"id": "81613b9c-7c4d-49c5-af2f-fd83bc8c7d15",
+			"name": "Delete book data by valid id",
+			"url": "https://go-render-book-rest-api.onrender.com/books/4",
+			"time": 245,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is within an acceptable range": false,
+				"Content-Type header is application/json": true,
+				"Response has the required fields": false,
+				"Message is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Message is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				245
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is within an acceptable range": false,
+					"Content-Type header is application/json": true,
+					"Response has the required fields": false,
+					"Message is a non-empty string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 489,
+	"collection": {
+		"requests": [
+			{
+				"id": "d678abbc-a0de-46af-ac25-290834e0b970",
+				"method": "DELETE"
+			},
+			{
+				"id": "81613b9c-7c4d-49c5-af2f-fd83bc8c7d15",
+				"method": "DELETE"
+			}
+		]
+	}
+}
